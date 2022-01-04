@@ -1,0 +1,23 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+
+  
+{% if user.username == "alejandro" %}
+<div class="contenedorFormulario">
+    <h1 style="color: white; text-align: center;">Editar medicamento {{articulos.nombreArticulo}}</h1>    
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: blanchedalmond; margin: 20px auto">{{form.as_table}}</table>
+        <input type="submit" value="Editar" >
+
+    </form>
+
+</div>
+{% endif %}
+{% endblock %}
